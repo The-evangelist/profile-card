@@ -1,0 +1,47 @@
+:root {
+  --card-bg: #F9EA9A;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --radius: 12px;
+  --gap: 1rem;
+  font-family: "Edu NSW ACT Cursive", cursive;;
+}
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #eef2ff;
+  color: #684E32;
+}
+.container { max-width: 980px; width: 100%; }
+article[data-testid="test-profile-card"] {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  padding: 1rem;
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: 1fr;
+}
+@media (min-width: 720px) {
+  article[data-testid="test-profile-card"] {
+    grid-template-columns: 260px 1fr;
+  }
+}
+.avatar-column { display: flex; flex-direction: column; align-items: center; gap: .75rem; }
+figure { margin: 0; }
+img[data-testid="test-user-avatar"] {
+  width: 180px; height: 180px; object-fit: cover; border-radius: 14px;
+}
+.avatar-controls input { width: 100%; padding: .5rem; margin-bottom: .5rem; border-radius: 8px; border: 1px solid #e6e9ef; }
+header h2 { margin: 0; font-size: 1.25rem; }
+header p { color: var(--muted); }
+.email-section { margin-top: 1rem; }
+.email-section input { width: 100%; padding: .5rem; border-radius: 8px; border: 1px solid #e6e9ef; }
+nav ul { list-style: none; display: flex; gap: .5rem; padding: 0; }
+nav a { text-decoration: none; color: var(--accent); }
+nav a:hover { text-decoration: underline; }
+.lists { display: grid; gap: 1rem; margin-top: 1rem; }
+@media (min-width: 720px) { .lists { grid-template-columns: 1fr 1fr; } }

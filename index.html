@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Profile Card — Accessible</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <article data-testid="test-profile-card" aria-labelledby="profile-name">
+      <div class="avatar-column">
+        <figure>
+          <img src="./me.png" alt="User avatar photo" data-testid="test-user-avatar" id="avatarImage" />
+          <figcaption class="sr-only">User avatar</figcaption>
+        </figure>
+      </div>
+
+      <div>
+        <header>
+          <h2 data-testid="test-user-name" id="profile-name">Ekoi Anametop Joseph</h2>
+          <p data-testid="test-user-bio">Frontend developer, movie enthusiast, and basketball nerd. Loves building projects and talking to people. </p>
+          <div class="meta">
+            <div class="time">Current time: <span data-testid="test-user-time" id="timeMs">0</span></div>
+          </div>
+        </header>
+
+        <section class="email-section">
+          <label for="userEmail">Email: ekoianametop@gmail.com</label>
+        </section>
+
+        <nav data-testid="test-user-social-links" aria-label="Social links">
+          <ul>
+            <li><a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-twitter">Twitter</a></li>
+            <li><a href="https://github.com/The-evangelist" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-github">My GitHub</a></li>
+          </ul>
+        </nav>
+
+        <div class="lists">
+          <section>
+            <h3>Hobbies</h3>
+            <ul data-testid="test-user-hobbies">
+              <li>Working out</li>
+              <li>Watching movies</li>
+              <li>Playing basketball</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Dislikes</h3>
+            <ul data-testid="test-user-dislikes">
+              <li>Unclear requirements</li>
+              <li>Auto-playing videos with sound</li>
+              <li>Noise</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </article>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
